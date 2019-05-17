@@ -37,29 +37,29 @@
             </p>
             <button class="appointment-button" type="button" name="button">Поиск гостиницы в седоне</button>
          </section>
-         <form class="appointment-form" action="" method="post">
-           <p class="appointment-arrival-date">
+         <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+           <p class="appointment-form-item">
              <label>Дата заезда:
-               <input type="date" name="date">
+               <input class="appointment-form-input" type="date" name="date">
              </label>
            </p>
-           <p class="appointment-date-of-departure">
+           <p class="appointment-form-item">
              <label>Дата выезда:
-               <input type="date"  name="date">
+               <input class="appointment-form-input" type="date"  name="date">
              </label>
            </p>
-           <div class="adults">
-             <label for="number-adults">Взрослые:</label>
-              <button class="button-minus" type="button" name="minus">-</button>
+           <p class="appointment-form-item">
+             <label for="appointment-form-label">Взрослые:</label>
+              <button class="appointment-form-button" type="button" name="minus">-</button>
                <input type="number" name="number-adults" value="2" id="number-adults">
-              <button class="button-plus" type="button" name="plus">+</button>
-           </div>
-           <div class="children">
-             <label for="number-children">Дети:</label>
-              <button class="button-minus" type="button" name="minus">-</button>
+              <button class="appointment-form-button" type="button" name="plus">+</button>
+           </p>
+           <p class="appointment-form-item">
+             <label for="appointment-form-label">Дети:</label>
+              <button class="appointment-form-button" type="button" name="minus">-</button>
                <input type="number" name="number-children" value="0" id="number-children">
-             <button class="button-plus" type="button" name="plus">+</button>
-           </div>
+             <button class="appointment-form-button" type="button" name="plus">+</button>
+           </p>
            <button class="search-button" type="submit" name="button">Найти</button>
          </form>
       </main>
