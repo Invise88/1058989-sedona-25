@@ -20,36 +20,40 @@
       </header>
 
       <main class="container">
-        <form class="filter-option" action="index.html" method="post">
-          <h1 class="infrastructure">Инфраструктура</h1>
-          <ul class="infrastructure-option">
-            <li class="infrastructure-option-choice">
-              <input type="checkbox" checked name="pool" id="pool">
-              <label for="pool">Бассейн</label>
+        <form class="filter-option" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+          <legend class="filter-option-title">Инфраструктура</legend>
+          <ul class="filter-option-list">
+            <li class="filter-option-item">
+              <input class="filter-option-checkbox" type="checkbox" checked name="pool" id="pool">
+              <label class="filter-option-name" for="pool">Бассейн</label>
             </li>
-            <li class="infrastructure-option-choice">
-              <input type="checkbox" name="parking" id="parking">
-              <label for="parking"> Парковка</label>
+            <li class="filter-option-item">
+              <input class="filter-option-checkbox" type="checkbox" name="parking" id="parking">
+              <label class="filter-option-name for="parking"> Парковка</label>
             </li>
-            <li class="infrastructure-option-choice">
-              <input type="checkbox" name="wi-fi" id="wi-fi">
-              <label for="wi-fi">WI-FI</li>
+            <li class="filter-option-item">
+              <input class="filter-option-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+              <label class="filter-option-name for="wi-fi">WI-FI</li>
           </ul>
-          <h2 class="type-of-housing">Тип жилья</h2>
-          <ul class="type-of-housing-option">
-            <li class="type-of-housing-option-choice">
-              <input type="checkbox" checked name="hotel" id="hotel">
-              <label for="hotel">Гостиница</label>
+        </fieldset>
+        <fieldset>
+          <legend class="filter-option-title">Тип жилья</legend>
+          <ul class="filter-option-list">
+            <li class="filter-option-item">
+              <input class="filter-option-checkbox" type="checkbox" checked name="hotel" id="hotel">
+              <label class="filter-option-name for="hotel">Гостиница</label>
             </li>
-            <li class="type-of-housing-option-choice">
-              <input type="checkbox" checked name="motel" id="motel">
-              <label for="motel">Мотель</label>
+            <li class="filter-option-item">
+              <input class="filter-option-checkbox" type="checkbox" checked name="motel" id="motel">
+              <label class="filter-option-name for="motel">Мотель</label>
             </li>
-            <li class="type-of-housing-option-choice">
-              <input type="checkbox" checked name="apartments" id="apartments">
-              <label for="apartments">Апартаменты</label>
+            <li class="filter-option-item">
+              <input class="filter-option-checkbox" type="checkbox" checked name="apartments" id="apartments">
+              <label class="filter-option-name for="apartments">Апартаменты</label>
             </li>
           </ul>
+        </fieldset>
         </form>
          <ul class="catalog">
             <li class="catalog-item">
