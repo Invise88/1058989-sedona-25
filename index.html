@@ -37,6 +37,31 @@
             </p>
             <button class="appointment-button" type="button" name="button">Поиск гостиницы в седоне</button>
          </section>
+         <form class="appointment-form" action="" method="post">
+           <p class="appointment-arrival-date">
+             <label>Дата заезда:
+               <input type="date" name="date">
+             </label>
+           </p>
+           <p class="appointment-date-of-departure">
+             <label>Дата выезда:
+               <input type="date"  name="date">
+             </label>
+           </p>
+           <div class="adults">
+             <label for="number-adults">Взрослые:</label>
+              <button class="button-minus" type="button" name="minus">-</button>
+               <input type="number" name="number-adults" value="2" id="number-adults">
+              <button class="button-plus" type="button" name="plus">+</button>
+           </div>
+           <div class="children">
+             <label for="number-children">Дети:</label>
+              <button class="button-minus" type="button" name="minus">-</button>
+               <input type="number" name="number-children" value="0" id="number-children">
+             <button class="button-plus" type="button" name="plus">+</button>
+           </div>
+           <button class="search-button" type="submit" name="button">Найти</button>
+         </form>
       </main>
       <footer class="main-footer">
          <a href="gallery.html">#VISITSEDONA</a>
