@@ -40,24 +40,24 @@
          <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
            <p class="appointment-form-item">
              <label>Дата заезда:
-               <input class="appointment-form-input" type="date" name="date">
-             </label>
+               <input class="appointment-form-input" type="text" name="date" value="24 апреля 2017">
+             </label class="appointment-form-date">
            </p>
            <p class="appointment-form-item">
-             <label>Дата выезда:
-               <input class="appointment-form-input" type="date"  name="date">
+             <label class="appointment-form-date">Дата выезда:
+               <input class="appointment-form-input" type="text"  name="date" value="4 июля 2017">
              </label>
            </p>
            <p class="appointment-form-item">
              <label for="appointment-form-label">Взрослые:</label>
               <button class="appointment-form-button" type="button" name="minus">-</button>
-               <input type="number" name="number-adults" value="2" id="number-adults">
+               <input class="appointment-form-number" type="text" name="number-adults" value="2" id="number-adults">
               <button class="appointment-form-button" type="button" name="plus">+</button>
            </p>
            <p class="appointment-form-item">
              <label for="appointment-form-label">Дети:</label>
               <button class="appointment-form-button" type="button" name="minus">-</button>
-               <input type="number" name="number-children" value="0" id="number-children">
+               <input class="appointment-form-number" type="text" name="number-children" value="0" id="number-children">
              <button class="appointment-form-button" type="button" name="plus">+</button>
            </p>
            <button class="search-button" type="submit" name="button">Найти</button>
