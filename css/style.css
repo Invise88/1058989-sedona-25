@@ -1,0 +1,294 @@
+body{
+  margin: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #333333;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.background-photo {
+  background-image:url("../img/background-photo.jpg");
+  height: 410px;
+  width: 1200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.welcome-banner{
+  background-image:url("../img/welcome.svg");
+  width: 459px;
+  height: 353px;
+}
+
+  .main-navigation{
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+
+    background-color: #ffffff;
+  }
+
+.site-navigation{
+  list-style: none;
+}
+
+.site-navigation a{
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus{
+ color: #81b3d2;
+}
+
+.site-navigation a:active{
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.info,
+.appointment{
+  text-align: center;
+}
+
+.info h2{
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.appointment-title{
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.appointment-offers{
+  font-size: 14px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.appointment-button{
+  width: 568px;
+  height: 86px;
+  background-color: #766357;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color:#ffffff;
+  text-transform: uppercase;
+  border: none;
+}
+
+.appointment-button:hover,
+.appointment-button:focus{
+  background-color: #604e43;
+}
+
+.appointment-button:active{
+  background-color: #503e33;
+}
+
+.appointment-form{
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+}
+
+.appointment-form-input{
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  color: #000000;
+  border: none;
+}
+
+.appointment-form-button{
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  color: #bdbbbc;
+  border: none;
+}
+
+.appointment-form-input:hover{
+  background-color: #ebebeb;
+}
+.appointment-form-input:focus{
+  background-color: #ffffff;
+}
+
+.calendar {
+  width: 21px;
+  height: 22px;
+  object-fit: contain;
+  background-color: #cacaca;
+  background-image: url("../img/calendar.svg");
+  background-position: center;
+  margin-left: -30px;
+  padding-bottom: 4px;
+}
+.calendar:hover{
+  color: #000000;
+}
+.calendar:active{
+  color:#81b3d2;
+}
+
+.appointment-form-button:hover{
+  color:#000000;
+}
+
+.appointment-form-button:active{
+  color:#81b3d2;
+}
+
+.search-button{
+  width: 458px;
+  height: 58px;
+  background-color: #81b3d2;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color:#ffffff;
+  text-transform: uppercase;
+  border: none;
+}
+
+.search-button:hover,
+.search-button:focus{
+  background-color: #669ec0;
+}
+
+.search-button:active{
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.main-footer a{
+  color: #000000;
+}
+
+.social {
+ list-style: none;
+ text-align: center;
+}
+
+.social-item{
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+}
+
+.social-item:hover{
+  background-color: #669ec0;
+}
+
+.social-item:active{
+  background-color: #5496bd;
+}
+
+.footer-copyright-logo{
+  width: 115px;
+  height: 41px;
+  object-fit: contain;
+  background-color: #ffffff;
+}
+
+
+/*----------------------------------*/
+
+
+.catalog-item{
+  list-style: none;
+}
+
+.catalog-item-title{
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.catalog-item-title a{
+  color:#000000;
+}
+
+.catalog-item-type,
+.catalog-item-price{
+  font-size: 14px;
+  line-height: 21px;
+  color:#333333;
+}
+
+.catalog-item-more{
+  width: 110px;
+  height: 27px;
+  background-color: #81b3d2;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+}
+
+.catalog-item-more:hover{
+  background-color: #669ec0;
+}
+
+.catalog-item-more:active{
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.catalog-item-to-book{
+  width: 142px;
+  height: 27px;
+  background-color: #766357;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+}
+
+.catalog-item-to-book:hover{
+background-color: #604e43;
+}
+
+.catalog-item-to-book:active{
+  background-color: #503e33;
+  color:rgba(255, 255, 255, 0.3);
+}
+
+.catalog-item-rating-star{
+  height: 17px;
+}
+
+.catalog-item-rating-star{
+  width: 18px;
+  height: 17px;
+  background-image: url("../img/star.svg");
+  background-position: center;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.catalog-item-rating{
+  width: 110px;
+  height: 27px;
+  background-color: #f2f2f2;
+  color: #666666;
+  text-align: center;
+}
