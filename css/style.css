@@ -204,12 +204,28 @@ a {
   background-color: #5496bd;
 }
 
-.footer-copyright-logo{
+.footer-copyright-link{
   width: 115px;
-  height: 41px;
-  object-fit: contain;
+  height: 40px;
+  background-image: url("../img/logo-name.svg");
+  background-color: #ffffff;
+  display: inline-block;
+}
+
+.footer-copyright-link:hover{
+  width: 115px;
+  height: 40px;
+  background-image: url("../img/logo-name-hover.svg");
   background-color: #ffffff;
 }
+
+.footer-copyright-link:active{
+  width: 115px;
+  height: 40px;
+  background-image: url("../img/logo-name-active.svg");
+  background-color: #ffffff;
+
+
 
 
 /*----------------------------------*/
