@@ -34,6 +34,7 @@ a {
   position: absolute;
   left: 530px;
   top: 0;
+  z-index: 1;
 }
 
 .welcome-banner {
@@ -82,9 +83,14 @@ a {
   color: rgba(0, 0, 0, 0.3)
 }
 
+.site-navigation-item-photo {
+  margin-right: 240px;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .info,
@@ -108,7 +114,7 @@ a {
   line-height: 26px;
   width: 440px;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
   font-weight: bold;
   color: #000000;
 }
@@ -127,17 +133,17 @@ a {
   font-size: 30px;
   line-height: 36px;
   color: #000000;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   display: block;
 }
 
 .appointment-offers {
   margin: 0 auto;
-  width: 434px;
+  width: 440px;
   font-size: 14px;
   line-height: 24px;
   color: #333333;
-  margin-bottom: 52px;
+  margin-bottom: 46px;
 }
 
 .appointment-button {
@@ -177,6 +183,15 @@ a {
 .appointment-form-item {
   margin: 0;
   margin-bottom: 30px;
+  display: flex;
+}
+
+.appointment-form-option {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
 }
 
 .appointment-form-input::placeholder {
@@ -196,6 +211,24 @@ a {
   color: #000000;
   border: none;
   text-transform: uppercase;
+  width: 346px;
+  min-height: 38px;
+  padding-left: 13px;
+  padding-right: 35px;
+  box-sizing: border-box;
+  border: solid 2px #f2f2f2;
+}
+
+.appointment-form-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.appointment-form-input-number {
+  width: 38px;
+  padding: 3px;
+  text-align: center;
 }
 
 .appointment-form-button {
@@ -205,34 +238,46 @@ a {
   background-color: #f2f2f2;
   color: #bdbbbc;
   border: none;
+  width: 38px;
+  flex-shrink: 0;
+}
+
+.appointment-form-button-minus-adults {
+  margin-left: 40px;
+}
+
+.appointment-form-button-minus-children {
+  margin-left: 26px;
 }
 
 .appointment-form-input:hover {
   background-color: #ebebeb;
+  border-color: #ebebeb;
 }
 
 .appointment-form-input:focus {
-  border: solid 2px #e5e5e5;
   background-color: #ffffff;
+  border-color: #ebebeb;
 }
 
 .calendar {
   width: 21px;
   height: 22px;
-  object-fit: contain;
   background-image: url("../img/calendar.svg");
   background-position: center;
   border: none;
-  margin-left: -30px;
-  padding-bottom: 4px;
+  position: absolute;
+  top: 8px;
+  right: 9px;
+  padding: 0;
 }
 
 .calendar:hover {
-  color: #000000;
+  background-image: url("../img/calendar-hover.svg");
 }
 
 .calendar:active {
-  color: #81b3d2;
+  background-image: url("../img/calendar-active.svg");
 }
 
 .appointment-form-button:hover {
@@ -278,12 +323,18 @@ a {
 .main-footer {
   width: 1200px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 36px 101px 36px 132px;
   box-sizing: border-box;
+}
+
+.main-footer-index {
+  position: relative;
+  margin-top: -120px;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-gallery {
@@ -297,13 +348,16 @@ a {
   list-style: none;
   text-align: center;
   display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
 }
 
 .social-item {
   width: 46px;
   height: 48px;
   background-color: #81b3d2;
-  margin: 0 6px;
+  margin: 0 3px;
 }
 
 .social-item:hover {
@@ -360,10 +414,11 @@ a {
 .footer-copyright {
   display: flex;
   align-items: center;
+  margin: 0;
 }
 
 .footer-copyright span {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .footer-copyright-link {
