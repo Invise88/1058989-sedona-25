@@ -314,6 +314,28 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .appointment-form {
   font-size: 14px;
   line-height: 26px;
@@ -324,6 +346,12 @@ a {
   padding: 55px;
   position: absolute;
   left: 316px;
+  display: none;
+}
+
+.appointment-form-show {
+  display: block;
+  animation: opacity 0.5s;
 }
 
 .appointment-form-item {
@@ -388,12 +416,38 @@ a {
   flex-shrink: 0;
 }
 
+.appointment-form-button-plus::before,
+.appointment-form-button-plus::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 3px;
+  background-color: #a9a9a9;
+  margin-left: -5px;
+  margin-top: -1px;
+}
+
+.appointment-form-button::after {
+  transform: rotate(90deg);
+}
+
 .appointment-form-button-minus-adults {
   margin-left: 40px;
 }
 
 .appointment-form-button-minus-children {
   margin-left: 26px;
+}
+
+.appointment-form-button-minus-adults::before,
+.appointment-form-button-minus-children::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 3px;
+  background-color: #a9a9a9;
+  margin-left: -5px;
+  margin-top: -1px;
 }
 
 .appointment-form-input:hover {
@@ -757,6 +811,7 @@ a {
   background-repeat: no-repeat;
   background-size: 27px 23px;
   background-position: left;
+  cursor: pointer;
 }
 
 .filter-option-checkbox~.filter-option-name {
@@ -764,6 +819,7 @@ a {
   background-repeat: no-repeat;
   background-size: 23px 23px;
   background-position: left;
+  cursor: pointer;
 }
 
 .filter-option-checkbox:disabled~.filter-option-name {
@@ -889,6 +945,7 @@ a {
 .result-title {
   margin: 0;
   margin-right: 49px;
+  color: #000000;
 }
 
 .sort {
@@ -897,6 +954,7 @@ a {
 }
 
 .sort-title {
+  color: #000000;
   margin: 0;
   margin-right: 40px;
 }
@@ -916,6 +974,8 @@ a {
   border: none;
   color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dotted #81b3d2;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .sort-item-button:hover {
@@ -930,11 +990,13 @@ a {
 .sort-item {
   margin-right: 33px;
 }
-.sort-item:nth-last-child(2){
+
+.sort-item:nth-last-child(2) {
   margin-left: auto;
   margin-right: 12px;
 }
-.sort-item:last-child{
+
+.sort-item:last-child {
   margin-right: 0;
 }
 
@@ -942,6 +1004,7 @@ a {
   color: #81b3d2;
   border: none;
 }
-.sort-item-direction-up{
+
+.sort-item-direction-up {
   border-bottom: none;
 }
