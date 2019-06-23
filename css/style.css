@@ -27,6 +27,7 @@ body {
   width: 1px;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
 }
 
@@ -49,6 +50,7 @@ a {
   background-size: 460px 363px, 1200px 57px, 1200px 773px;
   min-height: 508px;
   background-position: center, bottom, 0px -74px;
+  background-color: #36464e;
 }
 
 .main-header {
@@ -72,12 +74,14 @@ a {
   list-style: none;
 }
 
-.site-navigation a {
-  color: #000000;
+.site-navigation-item {
   padding: 14px 0 16px;
-  display: block;
   width: 240px;
   text-align: center;
+}
+
+.site-navigation a {
+  color: #000000;
 }
 
 .site-navigation a:hover,
@@ -111,7 +115,7 @@ a {
 
 .info {
   padding-top: 60px;
-  padding-bottom: 56px;
+  padding-bottom: 50px;
 }
 
 .info-reasons {
@@ -165,9 +169,9 @@ a {
   color: #ffffff;
   font-size: 21px;
   line-height: 21px;
-  width: 200px;
+  width: 160px;
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .advantages-item-subtitle,
@@ -179,7 +183,7 @@ a {
 }
 
 .advantages-item-subtitle {
-  margin-bottom: 15px;
+  margin-bottom: 22px;
 }
 
 .advantages-item-town {
@@ -193,6 +197,10 @@ a {
   order: 3;
 }
 
+.advantages-item-bridge .advantages-item-inner {
+  padding: 46px 45px 60px;
+}
+
 .advantages-item-square {
   order: 4;
 }
@@ -203,6 +211,11 @@ a {
 
 .advantages-item-tourists {
   order: 6;
+}
+
+.advantages-item-tourists .advantages-item-descr {
+  margin: 0 auto;
+  width: 250px;
 }
 
 .advantages-item-features {
@@ -220,11 +233,13 @@ a {
   list-style: none;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-color: #ffffff;
+  width: 1200px;
 }
 
 .features-item {
   text-align: center;
-  padding: 150px 52px 80px;
+  padding: 161px 52px 83px;
   background-repeat: no-repeat;
   width: 33%;
   box-sizing: border-box;
@@ -255,7 +270,7 @@ a {
   line-height: 21px;
   font-weight: bold;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .features-item-descr {
@@ -267,7 +282,7 @@ a {
 
 .appointment {
   position: relative;
-  padding-top: 50px;
+  padding-top: 47px;
 }
 
 .appointment-wrapper {
@@ -314,6 +329,28 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes opacity {
   0% {
     opacity: 0;
@@ -346,26 +383,55 @@ a {
   padding: 55px;
   position: absolute;
   left: 316px;
-  display: none;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s opacity, 0.3s visibility;
 }
 
-.appointment-form-show {
-  display: block;
-  animation: opacity 0.5s;
+.appointment-form-hide {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .appointment-form-item {
   margin: 0;
   margin-bottom: 30px;
   display: flex;
+  position: relative;
 }
 
 .appointment-form-option {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  position: relative;
   align-items: center;
+}
+
+.appointment-form-input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+  border: none;
+  text-transform: uppercase;
+}
+
+.appointment-form-input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+  border: none;
+  text-transform: uppercase;
+}
+
+.appointment-form-input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+  border: none;
+  text-transform: uppercase;
 }
 
 .appointment-form-input::placeholder {
@@ -414,6 +480,7 @@ a {
   border: none;
   width: 38px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .appointment-form-button-plus::before,
@@ -428,6 +495,7 @@ a {
 }
 
 .appointment-form-button::after {
+  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
@@ -448,6 +516,26 @@ a {
   background-color: #a9a9a9;
   margin-left: -5px;
   margin-top: -1px;
+}
+
+.appointment-form-button-minus-adults:hover::before,
+.appointment-form-button-minus-children:hover::before {
+  background-color: #000000;
+}
+
+.appointment-form-button-minus-adults:active::before,
+.appointment-form-button-minus-children:active::before {
+  background-color: #81b3d2;
+}
+
+.appointment-form-button-plus:hover::before,
+.appointment-form-button-plus:hover::after {
+  background-color: #000000;
+}
+
+.appointment-form-button-plus:active::before,
+.appointment-form-button-plus:active::after {
+  background-color: #81b3d2;
 }
 
 .appointment-form-input:hover {
@@ -471,6 +559,7 @@ a {
   right: 9px;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .calendar:hover {
@@ -479,14 +568,6 @@ a {
 
 .calendar:active {
   background-image: url("../img/calendar-active.svg");
-}
-
-.appointment-form-button:hover {
-  color: #000000;
-}
-
-.appointment-form-button:active {
-  color: #81b3d2;
 }
 
 .search-button {
@@ -576,6 +657,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   display: inline-block;
+  vertical-align: top;
   padding: 15px;
 }
 
@@ -590,6 +672,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   display: inline-block;
+  vertical-align: top;
   padding: 13px;
 }
 
@@ -604,6 +687,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   display: inline-block;
+  vertical-align: top;
   padding: 15px;
   padding-right: 0px;
 }
@@ -628,6 +712,7 @@ a {
   background-image: url("../img/logo-name.svg");
   background-color: #ffffff;
   display: inline-block;
+  vertical-align: top;
 }
 
 .footer-copyright-link:hover {
@@ -755,6 +840,7 @@ a {
   background-image: url("../img/star.svg");
   background-position: center;
   display: inline-block;
+  vertical-align: top;
   background-repeat: no-repeat;
 }
 
@@ -851,6 +937,7 @@ a {
   width: 2px;
   height: 22px;
   background: #ffffff;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -940,6 +1027,8 @@ a {
 .result {
   display: flex;
   padding: 31px 73px 33px 72px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .result-title {
@@ -951,6 +1040,9 @@ a {
 .sort {
   display: flex;
   flex-grow: 1;
+  font-size: 12px;
+  line-height: 18px;
+  align-items: center;
 }
 
 .sort-title {
