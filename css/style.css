@@ -970,6 +970,7 @@ a {
   font: inherit;
   background: none;
   border: none;
+  line-height: 21px;
 }
 
 .range-controls {
